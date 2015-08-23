@@ -56,11 +56,19 @@ Currently we have the following fragrances:
 
 So you want to be an iScroll master. Cool, because that is what I'll make you into.
 
+学习 iScroll 最好的方式是通过查看演示。在文档中你会发现一个 `demo` 文件夹[stuffed with examples](https://github.com/cubiq/iscroll/tree/master/demos)。这里有大部分的脚本功能概述。
+
 The best way to learn the iScroll is by looking at the demos. In the archive you'll find a `demo` folder [stuffed with examples](https://github.com/cubiq/iscroll/tree/master/demos). Most of the script features are outlined there.
+
+`iScroll` 是一个类，需要启动每个滚动区域。………………………………
 
 `IScroll` is a class that needs to be initiated for each scrolling area. There's no limit to the number of iScrolls you can have in each page if not that imposed by the device CPU/Memory.
 
+尽量保持简单的 DOM 结构。 …………
+
 Try to keep the DOM as simple as possible. iScroll uses the hardware compositing layer but there's a limit to the elements the hardware can handle.
+
+最佳的 HTML 结构：
 
 The optimal HTML structure is:
 
