@@ -1,12 +1,25 @@
 <h1 id="intro">iScroll, smooth scrolling for the web</h1>
 
+iScroll 是高性能，体积小，无依赖性，多平台的 javaScript 滚轮。
+
 iScroll is a high performance, small footprint, dependency free, multi-platform javascript scroller.
+
+它适用于台式机、手机和智能电视
 
 It works on desktop, mobile and smart TV. It has been vigorously optimized for performance and size so to offer the smoothest result on modern and old devices alike.
 
+iScroll 不只是 `scroll`， 它可以处理任何与用户交互的移动元素，它增加了滚动、缩放、平移、无限滚动、视差滚动、旋转木马到你的项目，并设法做到大小仅4kb，给它一把扫帚，它也会清理你的办公室。
+
 iScroll does not just *scroll*. It can handle any element that needs to be moved with user interaction. It adds scrolling, zooming, panning, infinite scrolling, parallax scrolling, carousels to your projects and manages to do that in just 4kb. Give it a broom and it will also clean up your office.
 
+即使在平台上，其中原生的滚动是不够好，iScroll添加功能，将是不可能的，否则。具体做法是：
+
 Even on platforms where native scrolling is good enough, iScroll adds features that wouldn't be possible otherwise. Specifically:
+
+* 
+* 自定义动画
+* 自定义事件
+* 出包支持多平台，从旧的 Android 到最新的iPhone，从浏览器到互联网浏览器。
 
 * Granular control over the scroll position, even during momentum. You can always get and set the x,y coordinates of the scroller.
 * Animation can be customized with user defined easing functions (bounce, elastic, back, ...).
@@ -15,9 +28,19 @@ Even on platforms where native scrolling is good enough, iScroll adds features t
 
 <h2 id="iscroll-versions">The many faces of iScroll</h2>
 
+iScroll 关于所有的优化。为了达到最高的性能，已经被分成多个版本，你可以根据你的需求挑选你需要的版本。
+
 iScroll is all about optimization. To reach the highest performance it has been divided into multiple versions. You can pick the version that better suits your need.
 
+目前我们有以下的香水：
+
 Currently we have the following fragrances:
+
+* **iscroll.js**，它是通用的脚本，它包括最常用的功能和非常高性能的一个小足迹。
+* **iscroll-lite.js**，它是一个精简版的主脚本。它不支持卡、滚动条、鼠标滚轮、按键绑定。但如果你需要的是滚动（尤其是在移动端） *iScroll lite* 是最小、最快的解决方案。
+* **iscroll-probe.js**，探测当前滚动的位置是一个艰巨的任务，这就是我为什么决定建立一个专门的版本。如果你需要知道在一个特定的时间滚动位置，这个 iScroll 适合你。（我在做一些测试，这个可能最终在常规的 `iScroll.js` 脚本里，所以密切观察就可以了）。
+* **iscroll-zoom.js**， 增加了缩放到标准的滚动。
+* **iscroll-infinite.js**， 能够做到无限缓存滚动。在移动设备中处理很长的列表元素是不容易的任务。 *iScroll infinite* 使用缓存机制，可以让你滚动无限数量潜在的元素。
 
 * **iscroll.js**, it is the general purpose script. It includes the most commonly used features and grants very high performance in a small footprint.
 * **iscroll-lite.js**, it is a stripped down version of the main script. It doesn't support snap, scrollbars, mouse wheel, key bindings. But if all you need is scrolling (especially on mobile) *iScroll lite* is the smallest, fastest solution.
