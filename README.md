@@ -80,6 +80,8 @@ The optimal HTML structure is:
         </ul>
     </div>
 
+iScroll 必须应用到滚动区域的包装器内。在上面的例子中 `UL` 将滚动。只有容器的第一个子元素能够滚动，另外的子元素将被简单忽略。
+
 iScroll must be applied to the wrapper of the scrolling area. In the above example the `UL` element will be scrolled. Only the first child of the container element is scrolled, additional children are simply ignored.
 
 <div class="tip">
