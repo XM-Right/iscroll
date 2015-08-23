@@ -50,6 +50,8 @@ Currently we have the following fragrances:
 
 <h2 id="getting-started">Getting started</h2>
 
+所以你要变成一个 iSroll 大师， 因为我会让你变成。
+
 So you want to be an iScroll master. Cool, because that is what I'll make you into.
 
 The best way to learn the iScroll is by looking at the demos. In the archive you'll find a `demo` folder [stuffed with examples](https://github.com/cubiq/iscroll/tree/master/demos). Most of the script features are outlined there.
