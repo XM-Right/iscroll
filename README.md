@@ -84,8 +84,12 @@ iScroll 必须应用到滚动区域的包装器内。在上面的例子中 `UL` 
 
 iScroll must be applied to the wrapper of the scrolling area. In the above example the `UL` element will be scrolled. Only the first child of the container element is scrolled, additional children are simply ignored.
 
+`box-shadow`、`opacity`、`text-shadow` 和 `alpha` 通道是所有属性不与硬件加速去很好的结合在一起。滚动可能会好看一些因素，但只要你的DOM变得更加复杂，你就会开始遇到滞后和跳跃。
+
 <div class="tip">
 <p><code>box-shadow</code>, <code>opacity</code>, <code>text-shadow</code> and alpha channels are all properties that don't go very well together with hardware acceleration. Scrolling might look good with few elements but as soon as your DOM becomes more complex you'll start experiencing lag and jerkiness.</p>
+
+有时一个背景图片
 
 <p>Sometimes a background image to simulate the shadow performs better than <code>box-shadow</code>. The bottom line is: experiment with CSS properties, you'll be surprised by the difference in performance a small CSS change can do.</p>
 </div>
