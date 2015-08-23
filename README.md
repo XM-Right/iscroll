@@ -1,3 +1,5 @@
+<h1 id="intro">iscroll，为网络平滑滚动</h1>
+
 <h1 id="intro">iScroll, smooth scrolling for the web</h1>
 
 iScroll 是高性能，体积小，无依赖性，多平台的 javaScript 滚轮。
