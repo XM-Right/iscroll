@@ -102,10 +102,14 @@ The minimal call to initiate the script is as follow:
     var myScroll = new IScroll('#wrapper');
     </script>
 
+第一个参数可以表示是该滚动容器元素的 DOM 选择器或者一个参考元素本身的字符串，下面是一个有效的语法：
+
 The first parameter can be a string representing the DOM selector of the scroll container element OR a reference to the element itself. The following is a valid syntax too:
 
     var wrapper = document.getElementById('wrapper');
     var myScroll = new IScroll(wrapper);
+
+所以基本上要么你直接传递元素或使用在 `querySelector` 的字符串。因此选择一个包装它的类名，而不是 ID ,你会怎么做：
 
 So basically either you pass the element directly or a string that will be given to `querySelector`. Consequently to select a wrapper by its class name instead of the ID, you'd do:
 
