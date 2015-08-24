@@ -115,21 +115,33 @@ So basically either you pass the element directly or a string that will be given
 
     var myScroll = new IScroll('.wrapper');
 
+需要注意的是 iScroll 使用 `querySelector` 而不是用 `querySelectorAll`， 所以只有选择第一个出现的才是。如果你需要 iScroll 应用于多个多个对象，你可以自己建立时间周期。
+
 Note that iScroll uses `querySelector` not `querySelectorAll`, so only the first occurrence of the selector is used. If you need to apply iScroll to multiple objects you'll have to build your own cycle.
+
+你不需要严格将实例分配给一个变量 `myScroll` ，但是它是方便随时参照 iScroll。
 
 <div class="tip">
 <p>You don't strictly need to assign the instance to a variable (<code>myScroll</code>), but it is handy to keep a reference to the iScroll.</p>
+
+例如你稍后可以检查 <a href="#scroller-info">scroller position</a> or <a href="#destroy">unload unnecessary events</a>，当你不再需要 iScroll。
 
 <p>For example you could later check the <a href="#scroller-info">scroller position</a> or <a href="#destroy">unload unnecessary events</a> when you don't need the iScroll anymore.</p>
 </div>
 
 <h2 id="initialization">Initialization</h2>
 
+该 iScroll 需要在 DOM 准备启动，最安全的方法是开始在 window 的 `onload` 事件，`DOMConrentLoaded` 或者内联初始化也可以，但是记住脚本需要知道滚动区域的高度/宽度。如果你有图像没有明确的高度/宽度声明，iScroll将有可能结束一个错误的滚动条的大小。
+
 The iScroll needs to be initiated when the DOM is ready. The safest bet is to start it on window `onload` event. `DOMContentLoaded` or inline initialization are also fine but remember that the script needs to know the height/width of the scrolling area. If you have images that don't have explicit width/height declaration, iScroll will most likely end up with a wrong scroller size.
+
+添加 `opsition:relative` 或者 `absolute` 到这个滚动容器（ the wrapper )。这本身通常会解决大部分的问题，错误的计算包装尺寸。
 
 <div class="important">
 <p>Add <code>position:relative</code> or <code>absolute</code> to the scroll container (the wrapper). That alone usually solves most of the problems with wrongly calculated wrapper dimensions.</p>
 </div>
+
+综上所述，最小的 iScroll 配置是：
 
 To sum up, the smallest iScroll configuration is:
 
