@@ -213,7 +213,11 @@ Nonetheless it is important to understand which mechanisms iScroll works on and 
 
 ### <small>options.</small>useTransform
 
+默认情况下，引擎使用 `transform` CSS 属性。此项设置为 `false` 滚动像我们2007年，IE：使用 `top`/`left`（因而滚动需要绝对定位）。
+
 By default the engine uses the `transform` CSS property. Setting this to `false` scrolls like we were in 2007, ie: using the `top`/`left` (and thus the scroller needs to be absolutely positioned).
+
+滚动和敏感的内容如 Flash、iframes 和 videos这可能是有用的，但要注意的是：性能损失是巨大的。
 
 This might be useful when scrolling sensitive content such as Flash, iframes and videos, but be warned: performance loss is huge.
 
