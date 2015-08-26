@@ -237,9 +237,13 @@ Default: `true`
 
 ### <small>options.</small>HWCompositing
 
+此选项尝试通过添加 `translateZ( 0 )` 放在硬件层的滚动条变换 CSS 属性。这大大提高了性能特别是在移动端，但有些你可能需要禁用它（ 特别是如果你有太多的元素和硬件无法赶上）。
+
 This option tries to put the scroller on the hardware layer by appending `translateZ(0)` to the transform CSS property. This greatly increases performance especially on mobile, but there are situations where you might want to disable it (notably if you have too many elements and the hardware can't catch up).
 
 Default: `true`
+
+如果不确定舍弃 iScroll 将决定什么是最佳的配置。为了获得最佳的性能上述所有选项应该被设置为 `true` （ 或者更好的让他们不确定，因为他们是自动设置为 `true`）。你可以试试如果你遇到打嗝和内存泄漏和他们一起玩。
 
 <div class="important">
 <p>If unsure leave iScroll decide what's the optimal config. For best performance all the above options should be set to <code>true</code> (or better leave them undefined as they are set to true automatically). You may try to play with them in case you encounter hiccups and memory leaks.</p>
@@ -249,17 +253,23 @@ Default: `true`
 
 ### <small>options.</small>bounce
 
+当 滚动 到边界它进行小幅反弹动画。禁用反弹可能帮助在旧设备上达到平滑的效果。
+
 When the scroller meets the boundary it performs a small bounce animation. Disabling bounce may help reach smoother results on old or slow devices.
 
 Default: `true`
 
 ### <small>options.</small>click
 
+重写本机滚动 iScroll 具有压制一些默认的浏览器行为，例如鼠标事件。如果你希望你的应用响应 `click` 事件，你必须明确的将此项设置为 `true`。请注意，建议使用自定义 `tap` event 事件，而不是（ 见下文 ）。
+
 To override the native scrolling iScroll has to inhibit some default browser behaviors, such as mouse clicks. If you want your application to respond to the *click* event you have to explicitly set this option to `true`. Please note that it is suggested to use the custom `tap` event instead (see below).
 
 Default: `false`
 
 ### <small>options.</small>disableMouse<br/><small>options.</small>disablePointer<br/><small>options.</small>disableTouch
+
+通过默认 iScroll 监听所有指针事件并响应所发生的第一个。这似乎是对资源的浪费，但功能检测已被证明相当不可靠，这收听到所有的方法是我们最安全的赌注宽浏览器/设备的兼容性。
 
 By default iScroll listens to all pointer events and reacts to the first one that occurs. It may seem a waste of resources but feature detection has proven quite unreliable and this *listen-to-all* approach is our safest bet for wide browser/device compatibility.
 
