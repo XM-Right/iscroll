@@ -166,13 +166,19 @@ To sum up, the smallest iScroll configuration is:
     </div>
     </body>
 
+参考 [barebone example](http://lab.cubiq.org/iscroll5/demos/barebone/) 中最少的 CSS/HTML 要求更多的细节。
+
 Refer to the [barebone example](http://lab.cubiq.org/iscroll5/demos/barebone/) for more details on the minimal CSS/HTML requirements.
+
+如果你有一个复杂的 DOM 节点，有时聪明添加 `onload` 事件一点延迟 iScroll 的初始化。执行 iScroll 用100 或者 200毫秒的延迟给浏览器，稍微休息一下，可以节省你执行 iScroll。
 
 <div class="tip">
 <p>If you have a complex DOM it is sometimes smart to add a little delay from the <code>onload</code> event to iScroll initialization. Executing the iScroll with a 100 or 200 milliseconds delay gives the browser that little rest that can save your ass.</p>
 </div>
 
 <h2 id="configuring">Configuring the iScroll</h2>
+
+iScroll 可以通过在初始化阶段将第二个参数来配置。
 
 iScroll can be configured by passing a second parameter during the initialization phase.
 
@@ -181,15 +187,23 @@ iScroll can be configured by passing a second parameter during the initializatio
         scrollbars: true
     });
 
+上面的例子打开鼠标滚轮支持和滚动条。
+
 The example above turns on mouse wheel support and scrollbars.
+
+初始化完成以后，你可以从选项对象访问标准化值。例如：
 
 After initialization you can access the *normalized* values from the `options` object. Eg:
 
     console.dir(myScroll.options);
 
+以上将返回配置 `myScroo` 实例中运行。通过 *normalized* 我的意思是如果你设置 `useTransform:true` （ 例如 ）但是浏览器不支持 CSS transfors， `useTransfor` 将会是 `false`。
+
 The above will return the configuration the `myScroll` instance will run on. By *normalized* I mean that if you set `useTransform:true` (for example) but the browser doesn't support CSS transforms, `useTransform` will be `false`.
 
 <h2 id="the-core">Understanding the core</h2>
+
+iScroll 使用各种技术基于 设备/浏览器 功能来滚动。**通常你不需要配置引擎**， iScroll 足够聪明，挑选最适合你的。
 
 iScroll uses various techniques to scroll based on device/browser capability. **Normally you don't need to configure the engine**, iScroll is smart enough to pick the best for you.
 
