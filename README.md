@@ -207,6 +207,8 @@ iScroll 使用各种技术基于 设备/浏览器 功能来滚动。**通常你�
 
 iScroll uses various techniques to scroll based on device/browser capability. **Normally you don't need to configure the engine**, iScroll is smart enough to pick the best for you.
 
+但是了解 iScroll 这些工作机制和如何配置是非常重要的。
+
 Nonetheless it is important to understand which mechanisms iScroll works on and how to configure them.
 
 ### <small>options.</small>useTransform
