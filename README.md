@@ -225,7 +225,11 @@ Default: `true`
 
 ### <small>options.</small>useTransition
 
+iScroll 使用过度完成动画（ 动力和反弹 ）。通过设置为 `false`，`requestAnimationFrame` 来代替。
+
 iScroll uses CSS transition to perform animations (momentum and bounce). By setting this to `false`, `requestAnimationFrame` is used instead.
+
+在现代浏览器上的差异几乎不明显。在较旧的设备转换执行更好。
 
 On modern browsers the difference is barely noticeable. On older devices transitions perform better.
 
