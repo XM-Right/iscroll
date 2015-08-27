@@ -273,7 +273,11 @@ Default: `false`
 
 By default iScroll listens to all pointer events and reacts to the first one that occurs. It may seem a waste of resources but feature detection has proven quite unreliable and this *listen-to-all* approach is our safest bet for wide browser/device compatibility.
 
+如果你有一个内部机制，设备检查或你知道你的脚本将要运行，你可能需要禁止所有你不需要的事件（ 鼠标，指针和触摸事件）。
+
 If you have an internal mechanism for device detection or you know in advance where your script will run on, you may want to disable all event sets you don't need (mouse, pointer or touch events).
+
+例如， 禁止鼠标和指针事件：
 
 For example to disable mouse and pointer events:
 
@@ -286,13 +290,21 @@ Default: `false`
 
 ### <small>options.</small>eventPassthrough
 
+有时你想要保留原生的垂直滚动但是又能添加水平滚动（ 可能是旋转木马）。设置为true，iscroll地区应对水平不尽人意只。垂直滑动会自然滚动整个页面。
+
 Sometimes you want to preserve native vertical scroll but being able to add an horizontal iScroll (maybe a carousel). Set this to `true` and the iScroll area will react to horizontal swipes only. Vertical swipes will naturally scroll the whole page.
+
+请参阅在移动设备上的 [事件传递演示](http://lab.cubiq.org/iscroll5/demos/event-passthrough/)。注意，这个可以被设置为 `horizontal` 逆的行为（ 自然的横向滚动， 垂直 iScoll）。
 
 See [event passthrough demo](http://lab.cubiq.org/iscroll5/demos/event-passthrough/) on a mobile device. Note that this can be set to `'horizontal'` to inverse the behavior (native horizontal scroll, vertical iScroll).
 
 ### <small>options.</small>freeScroll
 
+（当你需要水平和垂直滚动）这个是非常有用主要的二维滚动条。通常当你开始滚动在一个方向时另外一个方向将被锁定。
+
 This is useful mainly on 2D scrollers (when you need to scroll both horizontally and vertically). Normally when you start scrolling in one direction the other is locked.
+
+有时候你只是想无约束的自由移动。在这些情况下你可以设置此项为 `true` 。 见 [ 2D 滚动演示 ](http://lab.cubiq.org/iscroll5/demos/2d-scroll/)。
 
 Sometimes you just want to move freely with no constrains. In these cases you can set this option to `true`. See [2D scroll demo](http://lab.cubiq.org/iscroll5/demos/2d-scroll/).
 
@@ -300,11 +312,15 @@ Default: `false`
 
 ### <small>options.</small>keyBindings
 
+设置此项为 `true` 激活键盘（ 和远程控制 ）的相互作用。请参阅下面的 [键绑定](#key-bindings)获取更多的信息。
+
 Set this to `true` to activate keyboard (and remote controls) interaction. See the [Key bindings](#key-bindings) section below for more information.
 
 Default: `false`
 
 ### <small>options.</small>invertWheelDirection
+
+有意义当鼠标滚轮支持被激活，在这种情况下，它只是反转滚动方向。 （即下降向上滚动，反之亦然）。
 
 Meaningful when mouse wheel support is activated, in which case it just inverts the scrolling direction. (ie. going down scrolls up and vice-versa).
 
