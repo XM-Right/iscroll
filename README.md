@@ -423,15 +423,21 @@ Let's start with the basis.
 
 ### <small>options.</small>scrollbars
 
+正如我们在 [基本功能部分](#basic-features) 中提到有，你该怎么做才能激活灿烂的滚动条只有一件事，那有一件事是：
+
 As we mentioned in the [Basic features section](#basic-features) there's only one thing that you got to do to activate the scrollbars in all their splendor, and that one thing is:
 
     var myScroll = new IScroll('#wrapper', {
         scrollbars: true
     });
 
+当然，默认行为可以个性化。
+
 Of course the default behavior can be personalized.
 
 ### <small>options.</small>fadeScrollbars
+
+什么时候不用滚动条消失，离开这个 `false` 至备用资源。
 
 When not in use the scrollbar fades away. Leave this to `false` to spare resources.
 
@@ -439,11 +445,15 @@ Default: `false`
 
 ### <small>options.</small>interactiveScrollbars
 
+滚动条变为可拖动和用户可以与它进行交互。
+
 The scrollbar becomes draggable and user can interact with it.
 
 Default: `false`
 
 ### <small>options.</small>resizeScrollbars
+
+根据包装和滚轮宽度/高度的比例的滚动条大小的变化。将其设置为 `false` 使滚动条固定的大小。这可能是在出现的自定义风格的滚动条有用([ 见下文 ](#styling-the-scrollbar)).
 
 The scrollbar size changes based on the proportion between the wrapper and the scroller width/height. Setting this to `false` makes the scrollbar a fixed size. This might be useful in case of custom styled scrollbars ([see below](#styling-the-scrollbar)).
 
