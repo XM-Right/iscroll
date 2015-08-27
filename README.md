@@ -461,6 +461,8 @@ Default: `true`
 
 ### <small>options.</small>shrinkScrollbars
 
+当滚动条滚动到边界以外会少量收缩。
+
 When scrolling outside of the boundaries the scrollbar is shrunk by a small amount.
 
 Valid values are: `'clip'` and `'scale'`.
