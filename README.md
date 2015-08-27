@@ -354,11 +354,15 @@ Default: `true`
 
 ### <small>options.</small>scrollbars
 
+是否显示默认滚动条，查看更多 [滚动条](#scrollbar) 部分。
+
 Wheter or not to display the default scrollbars. See more in the [Scrollbar](#scrollbar) section.
 
 Default: `false`.
 
 ### <small>options.</small>scrollX<br/><small>options.</small>scrollY
+
+默认情况下只有垂直滚动启用。如果你需要水平滚动你必须设置 `scrollX` 为 `true`。查看 [水平滚动演示](http://lab.cubiq.org/iscroll5/demos/horizontal/)。
 
 By default only vertical scrolling is enabled. If you need to scroll horizontally you have to set `scrollX` to `true`. See [horizontal demo](http://lab.cubiq.org/iscroll5/demos/horizontal/).
 
@@ -366,11 +370,15 @@ See also the **freeScroll** option.
 
 Default: `scrollX: false`, `scrollY: true`
 
+需要注意的是 `scrollX/Y true` 具有相同的效果如 `overflow：auto`。设置一个方向 `false` 有助于腾出一些检查，因此 CPU 周期。
+
 <div class="important">
 <p>Note that <code>scrollX/Y: true</code> has the same effect as <code>overflow: auto</code>. Setting one direction to <code>false</code> helps to spare some checks and thus CPU cycles.</p>
 </div>
 
 ### <small>options.</small>startX<br/><small>options.</small>startY
+
+默认情况下 iScroll 开始从 `0,0` （ 左上角 ）的位置，你可以指示滚动开球的不同的位置。
 
 By default iScroll starts at `0, 0` (top left) position, you can instruct the scroller to kickoff at a different location.
 
@@ -378,16 +386,24 @@ Default: `0`
 
 ### <small>options.</small>tap
 
+设置为 `true` 让 iScroll发出一个自定义 `tap` 事件时，滚动区域被 点击/轻扫 但不滚动。
+
 Set this to `true` to let iScroll emit a custom `tap` event when the scroll area is clicked/tapped but not scrolled.
+
+这是建议的方式来处理用户点击交互的元素，要监听 tap 事件，你可以添加一个事件监听器因为你会做一个标准的事件，例子：
 
 This is the suggested way to handle user interaction with clickable elements. To listen to the tap event you would add an event listener as you would do for a standard event. Example: 
 
     element.addEventListener('tap', doSomething, false); \\ Native
     $('#element').on('tap', doSomething); \\ jQuery
     
+你也可以通过传递一个字符串自定义事件名称。例如：    
+
 You can also customize the event name by passing a string. Eg:
 
     tap: 'myCustomTapEvent'
+
+在这种情况下监听你的 `myCustomTapEvent`。
 
 In this case you'd listen to `myCustomTapEvent`.
 
@@ -395,7 +411,11 @@ Default: `false`
 
 <h2 id="scrollbars">Scrollbars</h2>
 
+滚动条不仅仅是什么名字。事实上，在内部，它们被引用作为指标。
+
 The scrollbars are more than just what the name suggests. In fact internally they are referenced as *indicators*.
+
+一个指标监听滚轮位置，通常它只是显示了其相对于整个位置，但它能做的就是这么多。
 
 An indicator listens to the scroller position and normally it just shows its position in relation to whole, but what it can do is so much more.
 
