@@ -328,6 +328,8 @@ Default: `false`
 
 ### <small>options.</small>momentum
 
+可以打开/关闭的动量动画执行当用户很快笔触在屏幕上。关闭这个选项极大地提高性能。
+
 You can turn on/off the momentum animation performed when the user quickly flicks on screen. Turning this off greatly enhance performance.
 
 Default: `true`
@@ -340,7 +342,11 @@ Default: `false`
 
 ### <small>options.</small>preventDefault
 
+是否要的 `preventDefault()` ，当事件被触发。这应留给 `true`，除非你真的知道你在做什么。
+
 Whether or not to `preventDefault()` when events are fired. This should be left `true` unless you really know what you are doing.
+
+见 `preventDefaultException` 中的[高级功能](#advanced-features)，以获取更多的控制权的 preventDefault 行为。
 
 See `preventDefaultException` in the [Advanced features](#advanced-features) for more control over the preventDefault behavior.
 
