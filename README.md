@@ -467,11 +467,18 @@ When scrolling outside of the boundaries the scrollbar is shrunk by a small amou
 
 Valid values are: `'clip'` and `'scale'`.
 
+`'clip'` 只是移动的容器外的指示灯，给人的感觉是，滚动条收缩，但它只是简单地移出屏幕。如果你能忍受在视觉效果上这个选项极大地提高了整体性能。
+
 `'clip'` just moves the indicator outside of its container, the impression is that the scrollbar shrinks but it is simply moving out of the screen. If you can live with the visual effect this option **immensely improves overall performance**.
+
+`'scale'` 关闭 `useTransition` 因此所有的动画都配有 `requestAnimationFrame` 。 指示器实际上市变化了尺寸和最终的结果是更好的眼睛。
 
 `'scale'` turns off `useTransition` hence all animations are served with `requestAnimationFrame`. The indicator is actually varied in size and the end result is nicer to the eye.
 
 Default: `false`
+
+需要注意的是调整大小不能由 GPU 来执行，所以 `scale` 是所有的 CPU.
+如果你的应用运行在多种设备上，我的建议是关闭这个选项设置为 `scale`, `clip` 和 `false` 基于平台的响应速度（ 例如：你可以将其设置为 `clip` 和桌面浏览器到旧的移动设备 `scale`）。
 
 <div class="tip">
 <p>Note that resizing can't be performed by the GPU, so <code>scale</code> is all on the CPU.</p>
@@ -482,13 +489,22 @@ See the [scrollbar demo](http://lab.cubiq.org/iscroll5/demos/scrollbars/).
 
 <h3 id="styling-the-scrollbar">Styling the scrollbar</h3>
 
+所以你不喜欢默认的滚动条造型你认为自己可以做的更好，来帮助自己！ iScroll 使得装饰滚动条易如反掌。首先设置 `scrollbars` 选项为 `'custom'`。
+
 So you don't like the default scrollbar styling and you think you could do better. Help yourself! iScroll makes dressing the scrollbar a snap. First of all set the `scrollbars` option to `'custom'`:
 
     var myScroll = new IScroll('#wrapper', {
         scrollbars: 'custom'
     });
 
+然后使用以下CSS类样式的小杂种。
+
 Then use the following CSS classes to style the little bastards.
+
+* **.iScrollHorizontalScrollbar**,这个被施加到水平容器。实际上承载滚动条指示器的元素。
+* **.iScrollVerticalScrollbar**, 和上面一样，只不过是应用于垂直容器。
+* **.iScrollIndicator**, 实际的滚动条指示器。
+* **.iScrollBothScrollbars**，这是容器中添加元素，滚动条显示。通常只有一个（ 水平或垂直）显示。
 
 * **.iScrollHorizontalScrollbar**, this is applied to the horizontal container. The element that actually hosts the scrollbar indicator.
 * **.iScrollVerticalScrollbar**, same as above but for the vertical container.
