@@ -511,6 +511,8 @@ Then use the following CSS classes to style the little bastards.
 * **.iScrollIndicator**, the actual scrollbar indicator.
 * **.iScrollBothScrollbars**, this is added to the container elements when both scrollbars are shown. Normally just one (horizontal or vertical) is visible.
 
+这个 [滚动条样式演示](http://lab.cubiq.org/iscroll5/demos/styled-scrollbars/) 应该比我糟糕的解释更加清晰。
+
 The [styled scrollbars demo](http://lab.cubiq.org/iscroll5/demos/styled-scrollbars/) should make things clearer than my lousy explanation.
 
 If you set `resizeScrollbars: false` you could make the scrollbar of a fixed size, otherwise it would be resized based on the scroller length.
