@@ -515,11 +515,17 @@ Then use the following CSS classes to style the little bastards.
 
 The [styled scrollbars demo](http://lab.cubiq.org/iscroll5/demos/styled-scrollbars/) should make things clearer than my lousy explanation.
 
+如果设置 `resizeScrollbars: false` 你可以做一个固定大小的滚动条，否则将根据滚轮长度来调整。
+
 If you set `resizeScrollbars: false` you could make the scrollbar of a fixed size, otherwise it would be resized based on the scroller length.
+
+请继续阅读下节的启示，会动摇你的世界。
 
 Please keep reading to the following section for a revelation that will shake your world.
 
 <h2 id="indicators">Indicators</h2>
+
+上述所有的滚动条选择在现实中只是包装到低一级 `indicators` 选项。它看起来或多或少是这样的：
 
 All the scrollbar options above are in reality just wrappers to the low level `indicators` option. It looks more or less like this:
 
@@ -540,13 +546,19 @@ All the scrollbar options above are in reality just wrappers to the low level `i
 
 ### <small>options.indicators.</small>el
 
+这是一个强制参数，持有该滚动条的容器元素。容器内的第一个孩子将是该指标。需要注意的是，滚动条可以在文档的任何地方，它不需要在卷轴包装。你开始觉察到这种工具的力量吗？
+
 This is a mandatory parameter which holds a reference to the scrollbar container element. The first child inside the container will be the indicator. Note that the scrollbar can be anywhere on your document, it doesn't need to be inside the scroller wrapper. Do you start perceiving the power of such tool?
+
+有效的语法是：
 
 Valid syntax would be:
 
     indicators: {
         el: document.getElementById('indicator')
     }
+
+或者干脆：
 
 Or simply:
 
@@ -555,6 +567,8 @@ Or simply:
     }
 
 ### <small>options.indicators.</small>ignoreBoundaries
+
+这告诉该指标忽略了其容器所施加的边界。既然我们能改变滚动条的速度比，它是让滚动条会有用的。说你想说的指示去两次为上卷一样快，它会达到它的运行很快结束。此选项用于 [视差滚动](#parallax-scrolling)。
 
 This tells the indicator to ignore the boundaries imposed by its container. Since we can alter the speed ratio of the scrollbar, it is useful to just let the scrollbar go. Say you want the indicator to go twice as fast as the scroller, it would reach the end of its run very quickly. This option is used for [parallax scrolling](#parallax-scrolling).
 
