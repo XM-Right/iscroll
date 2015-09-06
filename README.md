@@ -2,11 +2,11 @@
 
 <h1 id="intro">iScroll, smooth scrolling for the web</h1>
 
-iScroll 是高性能，体积小，无依赖性，多平台的 javaScript 滚轮。
+iScroll 是一个高性能，体积小，无依赖，多平台的 javaScript 页面滚动插件。
 
 iScroll is a high performance, small footprint, dependency free, multi-platform javascript scroller.
 
-它适用于台式机、手机和智能电视
+它工作在台式机、手机和智能电视。它被大力的优化和大小，以便于现在和旧的设备返回最平滑的结果。
 
 It works on desktop, mobile and smart TV. It has been vigorously optimized for performance and size so to offer the smoothest result on modern and old devices alike.
 
